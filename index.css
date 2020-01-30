@@ -1,0 +1,15 @@
+body {
+    background-color:rgb(244,244,244);
+    margin:0px;
+    padding:0px;
+}
+
+#title {
+    background-color:rgb(153,134,111);
+    height:100px;
+    width:100%;
+}
+
+#titlelogo {
+    height:100px;
+}
