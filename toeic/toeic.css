@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(212, 221, 228);
+    margin: 0px;
+    padding: 0px;
+}
+
+.unselectable {
+    user-select: none;
+}
+
+.bgrect {
+    position: absolute;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: muli-extrabold;
+    src: url(Muli-ExtraBold.ttf)
+}
+
+@font-face {
+    font-family: muli-semibold;
+    src: url(Muli-SemiBold.ttf)
+}
+
+#logo {
+    height : 30px;
+    margin-top : 30px;
+    margin-left : 50px;
+}
+
+#title {
+    height : 70px;
+    margin-top : 10px;
+    margin-left : 45px;
+    font-size: 70px;
+    font-family: muli-extrabold;
+    color: rgb(94, 98, 104);
+}
+
+#bluerect {
+    width: 350px;
+    height: 800px;
+    right: 200px;
+    top: 0px;
+
+    background-color: rgb(16, 36, 72);
+}
+
+@media ( max-width: 1325px ) {
+
+    #bluerect {
+        width: 350px;
+        height: 800px;
+        left : 775px;
+        top : 0px;
+
+        background-color: rgb(16, 36, 72);
+    }
+
+}
+
+#skyrect1 {
+    width: 100px;
+    height: 940px;
+    right: 200px;
+    top: 0px;
+
+    background-color: rgb(135, 207, 233);
+}
+
+#skyrect2 {
+    width: 100px;
+    height: 840px;
+    right: 20px;
+    top: 0px;
+
+    background-color: rgb(135, 207, 233);
+}
+
+#yellowrect {
+    width: 140px;
+    height: 880px;
+    right: 138px;
+    top: 0px;
+
+    background-color: rgb(235, 235, 115);
+}
+
+#blackrect {
+    width: 55px;
+    height: 990px;
+    right: 100px;
+    top: 0px;
+
+    background-color: rgb(98, 94, 104);
+}
+
+#window {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    border-radius: 25px;
+    
+    background-color:rgb(230, 248, 254);
+}
+
+#windowtitle {
+    font-size: 50pt;
+    font-family: muli-extrabold;
+    color: rgb(16, 36, 72);
+}
+
+#blueline {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 3px;
+    background-color: rgb(16, 36, 72);
+}
+
+#windowtext {
+    margin: 0px;
+    font-size: 35pt;
+    text-align: left;
+    font-family: muli-semibold;
+    color: rgb(16, 36, 72);
+}
+
+#answerenter {
+    margin-top: 20px;
+    padding: 0px;
+    height:80px;
+    text-align:right;
+}
+
+.buttonABCD {
+    border:none;
+    background:transparent;
+}

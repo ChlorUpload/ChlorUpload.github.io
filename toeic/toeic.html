@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="toeic.css">
+    </head>
+
+    <body>
+
+        <div class="unselectable bgrect" id="bluerect">
+            <div class="unselectable bgrect" id="skyrect1"></div>
+            <div class="unselectable bgrect" id="skyrect2"></div>
+            <div class="unselectable bgrect" id="yellowrect"></div>
+            <div class="unselectable bgrect" id="blackrect"></div>
+        </div>
+
+        <div id="logo" class="unselectable">
+            <img    alt="logo"
+                    src="res/toeic_logo.png"
+                    height = "100%"
+                    draggable="false"
+                >
+        </div>
+        <div id="title" class="unselectable">
+            Part 5 Random Test
+        </div>
+
+        <section id="window">
+            <span id="windowtitle"
+                  class="unselectable"
+            >Quiz.</span>
+
+            <div id="blueline"></div>
+            
+            <p id="windowtext" draggable="false">
+                All employees are required to ____ in the customer
+                service seminar unless they have worked at the
+                company more than three years.
+                <br> (A) enroll
+                <br> (B) attend
+                <br> (C) apply
+                <br> (D) expect
+            </p>
+
+            <div id="answerenter" class="unselectable">
+                <button class="buttonABCD unselectable"type="submit"><img src="res/button_A_abled.png" draggable="false"></button type="submit">
+                <button class="buttonABCD unselectable"type="submit"><img src="res/button_B_abled.png" draggable="false"></button type="submit">
+                <button class="buttonABCD unselectable"type="submit"><img src="res/button_C_abled.png" draggable="false"></button type="submit">
+                <button class="buttonABCD unselectable"type="submit"><img src="res/button_D_abled.png" draggable="false"></button type="submit">
+                <button class="buttonABCD unselectable"type="submit"><img src="res/button_confirm.png" draggable="false"></button type="submit">
+            </div>
+        </section>
+    </body>
+</html>
