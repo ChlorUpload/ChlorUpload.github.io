@@ -113,7 +113,7 @@ function getNewRandomQuiz(){
     pText = 'Quiz number '+String(quiz_num);
     aText = 'Answer'+String(quiz_num);
 
-    axios.get('data/'+String(quiz_num)+'.part5' {timeout :  })
+    axios.get('data/'+String(quiz_num)+'.part5')
         .then( function (response) {
             pText = JSON.stringify(response.data, null, '\t');
             pText = pText.replace(/\\n/gi, '<br>');
