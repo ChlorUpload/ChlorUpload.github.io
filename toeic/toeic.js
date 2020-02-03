@@ -109,9 +109,7 @@ function getNewRandomQuiz(){
 
     console.log('axios test')
 
-    //http://jsonplaceholder.typicode.com/todos
-
-    axios.get('readdata')
+    axios.get('data.part5')
         .then( function (response) {
             test.innerHTML=generateSuccessHTMLOutput(response);
         })
