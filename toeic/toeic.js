@@ -107,24 +107,16 @@ function getNewRandomQuiz(){
 
     test = document.getElementById("test");
 
-    console.log('axios test')
-
-    axios.get('data.part5')
-        .then( function (response) {
-            test.innerHTML=generateSuccessHTMLOutput(response);
-        })
-        .catch( function (error) {
-            console.log(error);
-        });
-
     pText = 'quiz'+String(quiz_num);
     aText = 'answer'+String(quiz_num);
+
+    axios.get('data/'+String(quiz_num)+'.part5')
+        .then( function (response) {
+            pText = JSON.stringify(response.data, null, '\t');
+        })
+        .catch( function (error) {
+            pText = "Error occured."
+        });
     
     quiz_num++;
-}
-
-function generateSuccessHTMLOutput(response) {
-    return  '<h4>Result</h4>' + 
-            '<h5>Data:</h5>' + 
-            '<p>' + JSON.stringify(response.data, null, '\t') + '</p>'; 
 }
