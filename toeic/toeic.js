@@ -16,7 +16,7 @@ let aText = 'answer_text';
 let selected = 1;
 updateButtons(1);
 
-let quiz_num = 0;
+let quiz_num = 1;
 getNewRandomQuiz();
 
 const showtype_quiz = 1;
@@ -104,7 +104,19 @@ function show() {
 }
 
 function getNewRandomQuiz(){
-    quiz_num++;
+    var xhttp = new XMLHttpRequest();
+
     pText = 'quiz'+String(quiz_num);
     aText = 'answer'+String(quiz_num);
+    
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            pText = xhttp.responseText;
+        }
+        else {
+            log('a');
+        }
+    };
+
+    quiz_num++;
 }
