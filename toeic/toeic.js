@@ -116,15 +116,22 @@ function getNewRandomQuiz(){
     axios.get('data/'+String(quiz_num)+'.part5')
         .then( function (response) {
             pText = JSON.stringify(response.data, null, '\t');
+            var a = pText.length;
+            pText= pText.substring( 1, a-1 )
+            
+            while(pText.substring(pText.length -2, pText.length)=='\\n') {
+                pText = pText.substring(0, pText.length - 2);
+            }
+            
             pText = pText.replace(/\\n/gi, '<br>');
-            var a = pText.lastIndexOf('.');
-            pText= pText.substring( 1, a+1 )
+            
             pText= pText.replace("문항#", '');
             var splited = pText.split("답#");
             pText= splited[0];
             var splited2 = splited[1].split("주석#");
             answer_text = splited2[0];
             aText=splited2[1];
+            
             show();
         })
         .catch( function (error) {
