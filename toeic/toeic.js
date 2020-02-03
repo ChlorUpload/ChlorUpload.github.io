@@ -105,8 +105,28 @@ function show() {
 
 function getNewRandomQuiz(){
 
+    test = document.getElementById("test");
+
+    console.log('axios test')
+
+    //http://jsonplaceholder.typicode.com/todos
+
+    axios.get('data')
+        .then( function (response) {
+            test.innerHTML=generateSuccessHTMLOutput(response);
+        })
+        .catch( function (error) {
+            console.log(error);
+        });
+
     pText = 'quiz'+String(quiz_num);
     aText = 'answer'+String(quiz_num);
     
     quiz_num++;
+}
+
+function generateSuccessHTMLOutput(response) {
+    return  '<h4>Result</h4>' + 
+            '<h5>Data:</h5>' + 
+            '<pre>' + JSON.stringify(response.data, null, '\t') + '</pre>'; 
 }
