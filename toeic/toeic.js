@@ -126,5 +126,5 @@ function getNewRandomQuiz(){
 function generateSuccessHTMLOutput(response) {
     return  '<h4>Result</h4>' + 
             '<h5>Data:</h5>' + 
-            '<pre>' + JSON.stringify(response.data, null, '\t') + '</pre>'; 
+            '<p>' + JSON.stringify(response.data, null, '\t') + '</p>'; 
 }
