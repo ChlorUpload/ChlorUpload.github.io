@@ -12,6 +12,7 @@ let btnD = document.getElementById("btnD");
 
 let pText = 'quiz_text';
 let aText = 'answer_text';
+let answer_num = 0;
 
 let selected = 1;
 updateButtons(1);
@@ -107,17 +108,28 @@ function getNewRandomQuiz(){
 
     test = document.getElementById("test");
 
-    console.log('axios test')
+    console.log('axios')
 
-    pText = 'quiz'+String(quiz_num);
-    aText = 'answer'+String(quiz_num);
+    pText = 'Quiz number '+String(quiz_num);
+    aText = 'Answer'+String(quiz_num);
 
-    axios.get('data.part5')
+    axios.get('data/'+String(quiz_num)+'.part5')
         .then( function (response) {
-            pText=''+JSON.stringify(response.data, null, '\t');
+            pText = JSON.stringify(response.data, null, '\t');
+            pText = pText.replace(/\\n/gi, '<br>');
+            pText = pText.replace(/\"/gi, '');
+            pText = pText.replace("문항#", '');
+        
+            //var splited = pText.split("답#");
+            //pText = splited[0];
+            //var splited2 = splited[1].split("주석#");
+            //aText=split2[1];
+            
+            show();
         })
         .catch( function (error) {
-            console.log(error);
+            pText = 'Quiz Loading Error';
+            show();
         });
     
     quiz_num++;
