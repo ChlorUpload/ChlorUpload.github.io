@@ -109,16 +109,16 @@ function getNewRandomQuiz(){
 
     console.log('axios test')
 
+    pText = 'quiz'+String(quiz_num);
+    aText = 'answer'+String(quiz_num);
+
     axios.get('data.part5')
         .then( function (response) {
-            test.innerHTML='<p>' + JSON.stringify(response.data, null, '\t') + '</p>';
+            pText=JSON.stringify(response.data, null, '\t');
         })
         .catch( function (error) {
             console.log(error);
         });
-
-    pText = 'quiz'+String(quiz_num);
-    aText = 'answer'+String(quiz_num);
     
     quiz_num++;
 }
