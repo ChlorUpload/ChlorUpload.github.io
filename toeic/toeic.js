@@ -103,6 +103,8 @@ function show() {
     }
 }
 
+let a= 1;
+
 function getNewRandomQuiz(){
 
     test = document.getElementById("test");
