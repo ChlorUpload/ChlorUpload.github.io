@@ -104,19 +104,9 @@ function show() {
 }
 
 function getNewRandomQuiz(){
-    var xhttp = new XMLHttpRequest();
 
     pText = 'quiz'+String(quiz_num);
     aText = 'answer'+String(quiz_num);
     
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            pText = xhttp.responseText;
-        }
-        else {
-            log('a');
-        }
-    };
-
     quiz_num++;
 }
