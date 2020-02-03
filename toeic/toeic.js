@@ -103,8 +103,6 @@ function show() {
     }
 }
 
-let a= 1;
-
 function getNewRandomQuiz(){
 
     test = document.getElementById("test");
@@ -113,7 +111,7 @@ function getNewRandomQuiz(){
 
     //http://jsonplaceholder.typicode.com/todos
 
-    axios.get('data')
+    axios.get('readdata')
         .then( function (response) {
             test.innerHTML=generateSuccessHTMLOutput(response);
         })
