@@ -117,13 +117,13 @@ function getNewRandomQuiz(){
         .then( function (response) {
             pText = JSON.stringify(response.data, null, '\t');
             pText = pText.replace(/\\n/gi, '<br>');
-            pText = pText.replace(/\"/gi, '');
-            pText = pText.replace("문항#", '');
-        
-            //var splited = pText.split("답#");
-            //pText = splited[0];
-            //var splited2 = splited[1].split("주석#");
-            //aText=split2[1];
+            var a = pText.lastIndexOf('.');
+            pText= pText.substring( 1, a+1 )
+            pText= pText.replace("문항#", '');
+            var splited = pText.split("답#");
+            pText= splited[0];
+            var splited2 = splited[1].split("주석#");
+            aText=splited2[1];
             
             show();
         })
