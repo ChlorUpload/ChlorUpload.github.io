@@ -114,7 +114,7 @@ function getNewRandomQuiz(){
 
     axios.get('data.part5')
         .then( function (response) {
-            pText=JSON.stringify(response.data, null, '\t');
+            pText=''+JSON.stringify(response.data, null, '\t');
         })
         .catch( function (error) {
             console.log(error);
