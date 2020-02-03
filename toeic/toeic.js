@@ -12,7 +12,7 @@ let btnD = document.getElementById("btnD");
 
 let pText = 'quiz_text';
 let aText = 'answer_text';
-let answer_num = 0;
+let answer_text = '';
 
 let selected = 1;
 updateButtons(1);
@@ -94,7 +94,7 @@ function show() {
     }
     else if (showtype == showtype_answer)
     {
-        windowtitle.innerHTML = 'Answer.';
+        windowtitle.innerHTML = 'Answer. '+answer_text;
         windowtext.innerHTML = aText;
         btnA.style.visibility='hidden';
         btnB.style.visibility='hidden';
@@ -123,8 +123,8 @@ function getNewRandomQuiz(){
             var splited = pText.split("답#");
             pText= splited[0];
             var splited2 = splited[1].split("주석#");
+            answer_text = splited2[0];
             aText=splited2[1];
-            
             show();
         })
         .catch( function (error) {
@@ -132,5 +132,10 @@ function getNewRandomQuiz(){
             show();
         });
     
-    quiz_num++;
+    if(quiz_num < quizmax) {
+        quiz_num++;
+    }
+    else {
+        quiz_num=1;
+    }
 }

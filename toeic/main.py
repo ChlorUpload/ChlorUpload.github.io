@@ -15,3 +15,7 @@ for line in lines:
     
     storefile.write(line)
     
+file.close()
+
+file =open('.\\max.js', 'wt', encoding='UTF8')
+file.write('const quizmax = '+str(document)+';')
