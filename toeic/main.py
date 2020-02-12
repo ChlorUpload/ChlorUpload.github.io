@@ -1,4 +1,7 @@
-findstr = '문항'
+
+# toeic part 5 datebass management python file
+
+findstr = '??#'
 
 document = 0
 
